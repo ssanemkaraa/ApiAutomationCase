@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Test Suite" verbose="2">
+    <test name="User Tests">
+        <classes>
+            <class name="tests.happyPathCases.BaseTests" />
+            <class name="tests.happyPathCases.DifferentIdTests" />
+            <class name="tests.negativeCases.GuidBlankTests" />
+            <class name="tests.negativeCases.GuidCharacterTests" />
+            <class name="tests.negativeCases.GuidFormatButCharacterTests" />
+            <class name="tests.negativeCases.GuidNineTests" />
+            <class name="tests.negativeCases.GuidSpaceTests" />
+            <class name="tests.negativeCases.GuidZeroTests" />
+        </classes>
+    </test>
+</suite>
