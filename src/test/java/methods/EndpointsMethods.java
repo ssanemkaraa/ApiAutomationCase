@@ -64,30 +64,43 @@ public class EndpointsMethods {
                         .extract().response();
     }
 
-    public Response patchUserActivity(String userId) {
-            return
-                    given()
-                    .contentType("application/json")
-                    .body("{\r\n    \"isActive\": true\r\n}")
-                    .when()
-                    .patch("/users/" + userId + "/activity")
-                    .then()
-                    .assertThat()
-                    .statusCode(200)
-                    .extract().response();
+    public Response patchUserActivityTrue(String userId) {
+        return
+                given()
+                        .contentType("application/json")
+                        .body("{\r\n    \"isActive\": true\r\n}")
+                        .when()
+                        .patch("/users/" + userId + "/activity")
+                        .then()
+                        .assertThat()
+                        .statusCode(200)
+                        .extract().response();
+    }
+
+    public Response patchUserActivityFalse(String userId) {
+        return
+                given()
+                        .contentType("application/json")
+                        .body("{\r\n    \"isActive\": false\r\n}")
+                        .when()
+                        .patch("/users/" + userId + "/activity")
+                        .then()
+                        .assertThat()
+                        .statusCode(200)
+                        .extract().response();
     }
 
 
-    public Response putUpdateUserInfo(String userId) {
+    public Response putUpdateUserInfo(String userId, String firstName, String lastName) {
         return
                 given()
-                .contentType("application/json")
-                .body("{\r\n    \"firstName\" : \"jane\",\r\n    \"lastName\" : \"doe\"\r\n}")
-                .when()
-                .put("/users/"+userId)
-                .then()
-                .assertThat()
-                .statusCode(200)
-                .extract().response();
+                        .contentType("application/json")
+                        .body("{\r\n    \"firstName\" : \""+firstName+"\",\r\n    \"lastName\" : \""+lastName+"\"\r\n}")
+                        .when()
+                        .put("/users/" + userId)
+                        .then()
+                        .assertThat()
+                        .statusCode(200)
+                        .extract().response();
     }
 }

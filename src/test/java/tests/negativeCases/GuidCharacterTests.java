@@ -1,17 +1,15 @@
 package tests.negativeCases;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
-import io.qameta.allure.Feature;
-import io.qameta.allure.Story;
+import io.qameta.allure.*;
 import methods.EndpointsVerifyMethods;
 import org.junit.Test;
 
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
-@Epic("All tests for User")
-@Feature("User Post Request")
+
+@Epic("This Epic includes endpoints with userId")
+@Feature("Get, Patch, Put, Delete")
 
 public class GuidCharacterTests {
     EndpointsVerifyMethods endpointsVerifyMethods;
@@ -21,36 +19,47 @@ public class GuidCharacterTests {
         endpointsVerifyMethods = new EndpointsVerifyMethods();
     }
 
-    @Story("All of user")
-    @Description("This request includes all of user")
+    @Story("GET - Get User By Id")
+    @Description("This response includes one user with id,username,firstName,lastName,isActive keys")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     public void spaceGuidGetUserById() {
 
+        // Verify response failed
         assertFalse(endpointsVerifyMethods.verifyGetUserById(id));
+
     }
 
-    @Story("All of user")
-    @Description("This request includes all of user")
+    @Story("PATCH - Switch User Activity")
+    @Description("This response includes userId and isActive keys")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     public void spaceGuidPatchUserActivity() {
 
+        // Verify response failed
         assertFalse(endpointsVerifyMethods.verifyPatchUserActivity(id));
+
     }
 
-    @Story("All of user")
-    @Description("This request includes all of user")
+    @Story("PUT - Update User Info")
+    @Description("This response includes userId key")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     public void spaceGuidPutUpdateUserInfo() {
 
+        // Verify response failed
         assertFalse(endpointsVerifyMethods.verifyPutUpdateUserInfo(id));
 
     }
 
-    @Story("All of user")
-    @Description("This request includes all of user")
+    @Story("DELETE - Remove User")
+    @Description("This response just return status code")
+    @Severity(SeverityLevel.NORMAL)
     @Test
     public void spaceGuidDeleteUser() {
 
+        // Verify response failed
         assertFalse(endpointsVerifyMethods.verifyDeleteUser(id));
+
     }
 }

@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import methods.EndpointsMethods;
 import methods.EndpointsVerifyMethods;
 import models.*;
-import org.junit.*;
+import org.junit.Test;
 
 import java.io.IOException;
 
@@ -15,20 +15,15 @@ import static org.junit.jupiter.api.Assertions.*;
 @Feature("Get, Post, Patch, Put, Delete")
 
 
-public class BaseTests {
-
+public class BaseId2Tests {
 
     EndpointsMethods endpointsMethods;
     EndpointsVerifyMethods endpointsVerifyMethods;
 
-    String id_1 = "c4f6c088-f91b-494e-b7f0-a08f48df3180";
-
-    //String id_2 = "c3e140a4-99db-44c2-a9ea-896904745993";
-
-    //String idUserModel = endpointsMethods.postCreateUser().as(UserActivityModel.class).getUserId();
+    String id_2 = "c3e140a4-99db-44c2-a9ea-896904745993";
 
 
-    public BaseTests() throws IOException {
+    public BaseId2Tests() throws IOException {
         endpointsMethods = new EndpointsMethods();
         endpointsVerifyMethods = new EndpointsVerifyMethods();
     }
@@ -64,9 +59,9 @@ public class BaseTests {
     @Test
     public void getUserById() {
 
-        if (endpointsVerifyMethods.verifyGetUserById(id_1)) {
+        if (endpointsVerifyMethods.verifyGetUserById(id_2)) {
 
-            Response response = endpointsMethods.getUserById(id_1);
+            Response response = endpointsMethods.getUserById(id_2);
             GetUserByIdModel user = response.as(GetUserByIdModel.class);
 
             // Verify response model is not null
@@ -111,9 +106,9 @@ public class BaseTests {
     @Test
     public void patchUserActivityTrue() {
 
-        if (endpointsVerifyMethods.verifyPatchUserActivity(id_1)) {
+        if (endpointsVerifyMethods.verifyPatchUserActivity(id_2)) {
 
-            Response response = endpointsMethods.patchUserActivityTrue(id_1);
+            Response response = endpointsMethods.patchUserActivityTrue(id_2);
             PatchSwitchUserActivityModel user = response.as(PatchSwitchUserActivityModel.class);
 
             // Verify response model is not null
@@ -122,7 +117,7 @@ public class BaseTests {
 
             // -----------------------------------------------------------------------------------
 
-            Response getUserByIdResponse = endpointsMethods.getUserById(id_1);
+            Response getUserByIdResponse = endpointsMethods.getUserById(id_2);
             GetUserByIdModel userDetailById = getUserByIdResponse.as(GetUserByIdModel.class);
 
             // Verify response model isActive: true
@@ -139,9 +134,9 @@ public class BaseTests {
     @Test
     public void patchUserActivityFalse() {
 
-        if (endpointsVerifyMethods.verifyPatchUserActivity(id_1)) {
+        if (endpointsVerifyMethods.verifyPatchUserActivity(id_2)) {
 
-            Response response = endpointsMethods.patchUserActivityFalse(id_1);
+            Response response = endpointsMethods.patchUserActivityFalse(id_2);
             PatchSwitchUserActivityModel user = response.as(PatchSwitchUserActivityModel.class);
 
             // Verify response model is not null
@@ -150,7 +145,7 @@ public class BaseTests {
 
             // -----------------------------------------------------------------------------------
 
-            Response getUserByIdResponse = endpointsMethods.getUserById(id_1);
+            Response getUserByIdResponse = endpointsMethods.getUserById(id_2);
             GetUserByIdModel userDetailById = getUserByIdResponse.as(GetUserByIdModel.class);
 
             // Verify response model isActive: false
@@ -167,12 +162,12 @@ public class BaseTests {
     @Test
     public void putUpdateUserInfo() {
 
-        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_1)) {
+        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_2)) {
 
             String firstName = "jane";
             String lastName = "doe";
 
-            Response response = endpointsMethods.putUpdateUserInfo(id_1, firstName, lastName);
+            Response response = endpointsMethods.putUpdateUserInfo(id_2, firstName, lastName);
             PutUpdateUserModel user = response.as(PutUpdateUserModel.class);
 
             // Verify response model is not null
@@ -180,7 +175,7 @@ public class BaseTests {
 
             // -----------------------------------------------------------------------------------
 
-            Response getUserByIdResponse = endpointsMethods.getUserById(id_1);
+            Response getUserByIdResponse = endpointsMethods.getUserById(id_2);
             GetUserByIdModel userDetailById = getUserByIdResponse.as(GetUserByIdModel.class);
 
             // Verify response model equal to sended data
@@ -198,12 +193,12 @@ public class BaseTests {
     @Test
     public void putUpdateUserInfo2() {
 
-        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_1)) {
+        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_2)) {
 
             String firstName = "test";
             String lastName = "test";
 
-            Response response = endpointsMethods.putUpdateUserInfo(id_1, firstName, lastName);
+            Response response = endpointsMethods.putUpdateUserInfo(id_2, firstName, lastName);
             PutUpdateUserModel user = response.as(PutUpdateUserModel.class);
 
             // Verify response model is not null
@@ -211,7 +206,7 @@ public class BaseTests {
 
             // -----------------------------------------------------------------------------------
 
-            Response getUserByIdResponse = endpointsMethods.getUserById(id_1);
+            Response getUserByIdResponse = endpointsMethods.getUserById(id_2);
             GetUserByIdModel userDetailById = getUserByIdResponse.as(GetUserByIdModel.class);
 
             // Verify response model equal to sended data
@@ -229,10 +224,10 @@ public class BaseTests {
     @Test
     public void deleteUser() {
 
-        if (endpointsVerifyMethods.verifyDeleteUser(id_1)) {
+        if (endpointsVerifyMethods.verifyDeleteUser(id_2)) {
 
             // Verify user list has not deleted user
-            assertFalse(endpointsVerifyMethods.verifyGetUserById(id_1));
+            assertFalse(endpointsVerifyMethods.verifyGetUserById(id_2));
 
         } else {
             System.out.println("Something went wrong!");
