@@ -28,10 +28,10 @@ public class EndpointsMethods {
                         .extract().response();
     }
 
-    public Response postCreateUser() {
+    public Response postCreateUser(String firstName, String lastName, String username, String password) {
         return
                 given()
-                        .body("")
+                        .body("{\r\n    \"firstName\": \""+firstName+"\",\r\n    \"lastName\": \""+lastName+"\",\r\n    \"username\": \""+username+"\",\r\n    \"password\" : \""+password+"\"\r\n}")
                         .when()
                         .post("/users")
                         .then()

@@ -88,7 +88,12 @@ public class BaseTests {
 
         if (endpointsVerifyMethods.verifyPostCreateUser()) {
 
-            Response response = endpointsMethods.postCreateUser();
+            String firstName = "jane";
+            String lastName = "doe";
+            String username = "doejj";
+            String password = "123456Aa*";
+
+            Response response = endpointsMethods.postCreateUser(firstName,lastName,username,password);
             PostCreateUserModel user = response.as(PostCreateUserModel.class);
 
             // Verify response model is not null

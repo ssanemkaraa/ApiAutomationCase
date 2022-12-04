@@ -4,7 +4,7 @@
     <test name="User Tests">
         <classes>
             <class name="tests.happyPathCases.BaseTests" />
-            <class name="tests.happyPathCases.DifferentIdTests" />
+            <class name="tests.happyPathCases.BaseId2Tests" />
             <class name="tests.negativeCases.GuidBlankTests" />
             <class name="tests.negativeCases.GuidCharacterTests" />
             <class name="tests.negativeCases.GuidFormatButCharacterTests" />
