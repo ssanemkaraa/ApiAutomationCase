@@ -6,22 +6,49 @@ Bu proje GoArt tarafından iletilen API servisi için yazılmış bir Java Maven
 ## Api Hakkında
 API uçları ve aldıkları parametreler hakkında gerekli bilgiler aşağıda verilmiştir. İlgili uca ait test senaryoları açıklanmıştır.
 
+Tüm senaryolar için Postman ile ;
+
+- 1- Status Code kontrolü
+- 2- Content Type header kontrolü
+- 3- Content Type application/json; charset=utf-8 kontrolü
+- 4- Key data type kontrolü
+- 5- Response time kontrolü
+
+ve uç özelinde aşağıdaki testlerin kontrolü sağlanmıştır.
+
+Postman ile yapılan proje detaylarına aşağıdaki linkten erişilebilir.
+- https://www.postman.com/payload-astronomer-91443209/workspace/sanemkara/overview
+
+Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test methodunda gerçekleştirildiği açıklanmıştır.
 
 ## Create User 
 ### |  POST      | ....../users 
 | **Request**    | **Tip**  | **Açıklama**    |------------------------------------------------------------|**Response**      | **Tip (Dict)**  | **Açıklama**    | 
 | :--------      | :------- | :-------------- |:---------------------------------------------------------- |:---------------- | :-------------- | :-------------- | 
 | `firstName`    | `String` | *Adı*           |                                                            | `userId`         | `guid`          | *Kullanıcı Id*  | 
-| `lastName`     | `String` | *Soyadı*        |                                                            |                  |                 |                 |                      
+| `lastName`     | `String` | *Soyadı*        |                                                            |                  |                 |                 |              
 | `username`     | `String` | *Kullanıcı Adı* |                                                            |                  |                 |                 | 
 | `password`     | `String` | *Şifre*         |                                                            |                  |                 |                 |  
 
 ```
 1- Örnek body ile kullanıcının oluştuğunun doğrulanması
-2- Her istekte yeni bir kullanıcı id oluşması
-3- Body parametresi olmadan kullanıcı oluşmaması
-4- Password dışındakiler zorunlu parametre
 ```
+- src/test/java/tests/happyPathCases/BaseTests.java --> postCreateUserTest() 
+- --> src/test/java/methods/EndpointsVerifyMethods.java --> verifyGetUserById()
+```
+2- Her istekte yeni bir kullanıcı id oluşması        
+```
+- Mock Api olması sebebiyle her istekte aynı id ile cevap dönmektedir.
+```
+3- Body parametresi olmadan kullanıcı oluşmaması 
+```
+- src/test/java/tests/negativeCases/BlankBodyTests.java --> postCreateUserTest() 
+- --> src/test/java/methods/EndpointsVerifyMethods.java --> verifyPostCreateUser()
+```
+4- Body parametresine String içinde karakterler gönderildiğinde kullanıcı oluşmaması
+```
+- src/test/java/tests/negativeCases/CharacterBodyTests.java --> postCreateUserTest() 
+- --> src/test/java/methods/EndpointsVerifyMethods.java --> verifyPostCreateUser()
 
 ## Get User List
 ### | GET        | ... /users 
@@ -34,8 +61,10 @@ API uçları ve aldıkları parametreler hakkında gerekli bilgiler aşağıda v
 |                |          |                 |                                                                     | `isActive`       | `Booelan`       | *Durum*         |
 
 ```
-1-
+1- Kullanıcı listesinin döndüğünün doğrulanması
 ```
+- src/test/java/tests/happyPathCases/BaseTests.java --> getUserListTest() 
+
 ## Get User By Id
 ### | GET        | ... /users/[guid] 
 | **Request**    | **Tip**  | **Açıklama**    |--------------------------------------------------------------------|**Response**      | **Tip (Dict)**  | **Açıklama**    | 
@@ -47,8 +76,44 @@ API uçları ve aldıkları parametreler hakkında gerekli bilgiler aşağıda v
 |                |          |                 |                                                                    | `isActive`       | `Booelan`       | *Durum*         |
 
 ```
-1-
+1- Örnek id ile kullanıcı bilgilerinin doğrulanması
 ```
+- src/test/java/tests/happyPathCases/BaseTests.java --> getUserById() 
+```
+2- getUserList ucu ile alınan diğer id ile kullanıcı bilgilerinin doğrulanması
+```
+- src/test/java/tests/happyPathCases/BaseId2Tests.java --> getUserById() 
+```
+3- Boş id değeri ("") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidBlankTests.java --> spaceGuidGetUserById()
+- !!! Burada boş id ile kullanıcı listesini getiren methoda istek atılmaktadır.
+```
+4- Boşluk id değeri (" ") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidSpaceTests.java --> spaceGuidGetUserById()
+- !!! Burada boş id ile kullanıcı listesini getiren methoda istek atılmaktadır.
+```
+5- Karakter guid değeri ("?!'^+%&/") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidCharacterTests.java --> characterGuidGetUserById()
+```
+6- Doğru guid formatı fakat karakter ("!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidFormatButCharacterTests.java --> formatCharacterGuidGetUserById()
+```
+7- Guid formatı sınır rakamlar ("99999999-9999-9999-9999-999999999999") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidNineTests.java --> nineGuidGetUserById()
+- Burada sadece 2 kullanıcı olduğu bilindiğinden bu test senaryosu yazılmıştır.
+```
+8- Guid formatı sınır rakamlar ("00000000-0000-0000-0000-000000000000") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidZeroTests.java --> zeroGuidGetUserById()
+- Buradaki test senaryosunun hatası ile daha önce karşılaşıldığı için yazılmıştır.
+```
+
+
 ## Remove User
 ### | DELETE     | ... /users/[guid] 
 | **Request**    | **Tip**  | **Açıklama**    |-------------------------------------------------------------------------|**Response**      | **Tip (Dict)**  | **Açıklama**    | 
