@@ -111,7 +111,6 @@ Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test me
 ```
 - src/test/java/tests/negativeCases/GuidZeroTests.java --> zeroGuidGetUserById()
 - Buradaki test senaryosunun hatası ile daha önce karşılaşıldığı için yazılmıştır.
-```
 
 
 ## Remove User
