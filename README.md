@@ -270,7 +270,9 @@ Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test me
 
 ## Projenin Kullanımı
 
-Bu bölümde projenin gereksinimlerinden ve kullanmından bahsedilecektir. Projenin Intellij IDEA derleyicisi ile açılması tasiye edilir. pom.xml dosyasındaki gereksinimler yüklenir. Proje JDK 19.0.1 ile hazırlanmıştır.  
+Bu bölümde projenin gereksinimlerinden ve kullanmından bahsedilecektir. 
+Projenin Intellij IDEA derleyicisi ile açılması tasiye edilir. 
+pom.xml dosyasındaki gereksinimler yüklenir.
 
 - https://mvnrepository.com/artifact/com.google.code.gson/gson
 - https://mvnrepository.com/artifact/io.rest-assured/rest-assured
