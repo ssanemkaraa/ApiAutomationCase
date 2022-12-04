@@ -63,7 +63,8 @@ Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test me
 ```
 1- Kullanıcı listesinin döndüğünün doğrulanması
 ```
-- src/test/java/tests/happyPathCases/BaseTests.java --> getUserListTest() 
+- src/test/java/tests/happyPathCases/BaseTests.java --> getUserListTest()
+- Bu uç diğer testlerde doğrulama yöntemi olarak kullanılmaktadır. Bir api ucunu diğer bir api ucu ile doğrulamanın tehlikesinin bilincinde olarak gönderilen api yapısına tek uygun doğrulama yönteminin bu olması sebebiyle bu şekilde yapılmıştır.
 
 ## Get User By Id
 ### | GET        | ... /users/[guid] 
@@ -86,7 +87,7 @@ Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test me
 ```
 3- Boş id değeri ("") ile status code 200 dönmemesi       
 ```
-- src/test/java/tests/negativeCases/GuidBlankTests.java --> spaceGuidGetUserById()
+- src/test/java/tests/negativeCases/GuidBlankTests.java --> blankGuidGetUserById()
 - !!! Burada boş id ile kullanıcı listesini getiren uca istek atılmaktadır.
 ```
 4- Boşluk id değeri (" ") ile status code 200 dönmemesi       
@@ -120,8 +121,42 @@ Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test me
 |                |          |                 |                                                                         |                  |                 |                 | 
 
 ```
-1-
+1- Örnek id ile kullanıcının silindiğinin doğrulanması
 ```
+- src/test/java/tests/happyPathCases/BaseTests.java --> deleteUser()
+- verifyGetUserById ucundan False beklenerek doğrulama gerçekleştirilmiştir. 
+```
+2- getUserList ucu ile alınan diğer id ile kullanıcının silindiğinin doğrulanması
+```
+- src/test/java/tests/happyPathCases/BaseId2Tests.java --> deleteUser()
+- verifyGetUserById ucundan False beklenerek doğrulama gerçekleştirilmiştir. 
+```
+3- Boş id değeri ("") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidBlankTests.java --> blankGuidDeleteUser()
+```
+4- Boşluk id değeri (" ") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidSpaceTests.java --> spaceGuidDeleteUser()
+```
+5- Karakter guid değeri ("?!'^+%&/") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidCharacterTests.java --> characterGuidDeleteUser()
+```
+6- Doğru guid formatı fakat karakter ("!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidFormatButCharacterTests.java --> formatCharacterGuidDeleteUser()
+```
+7- Guid formatı sınır rakamlar ("99999999-9999-9999-9999-999999999999") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidNineTests.java --> nineGuidDeleteUser()
+- Burada sadece 2 kullanıcı olduğu bilindiğinden bu test senaryosu yazılmıştır.
+```
+8- Guid formatı sınır rakamlar ("00000000-0000-0000-0000-000000000000") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidZeroTests.java --> zeroGuidDeleteUser()
+- Buradaki test senaryosunun hatası ile daha önce karşılaşıldığı için yazılmıştır.
+
 ## Switch User Activity 
 ### |  PATCH     | ....../users/[guid]/activity 
 | **Request**    | **Tip**  | **Açıklama**    |------------------------------------------------------------|**Response**      | **Tip (Dict)**  | **Açıklama**    | 
@@ -129,8 +164,51 @@ Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test me
 | `isActive `    | `Boolean`| *Adı*           |                                                            | `userId`         | `guid`          | *Kullanıcı Id*  |
 |                |          |                 |                                                            | `isActive`       | `Booelan`       | *Durum*         |
 ```
-1-
+1- Örnek id ve bodyde gönderilen true parametresi ile kullanıcının aktivitesinin değiştiğinin doğrulanması
 ```
+- src/test/java/tests/happyPathCases/BaseTests.java --> patchUserActivityTrue()
+- verifyGetUserById ucundan isActive value değeri true beklenerek doğrulama gerçekleştirilmiştir. 
+```
+2- getUserList ucu ile alınan diğer id ve bodyde gönderilen true parametresi ile kullanıcının aktivitesinin değiştiğinin doğrulanması
+```
+- src/test/java/tests/happyPathCases/BaseId2Tests.java --> patchUserActivityTrue()
+- verifyGetUserById ucundan isActive value değeri true beklenerek doğrulama gerçekleştirilmiştir.
+```
+3- Örnek id ve bodyde gönderilen false parametresi ile kullanıcının aktivitesinin değiştiğinin doğrulanması
+```
+- src/test/java/tests/happyPathCases/BaseTests.java --> patchUserActivityFalse()
+- verifyGetUserById ucundan isActive value değeri false beklenerek doğrulama gerçekleştirilmiştir. 
+```
+4- getUserList ucu ile alınan diğer id ve bodyde gönderilen false parametresi ile kullanıcının aktivitesinin değiştiğinin doğrulanması
+```
+- src/test/java/tests/happyPathCases/BaseId2Tests.java --> patchUserActivityFalse()
+- verifyGetUserById ucundan isActive value değeri false beklenerek doğrulama gerçekleştirilmiştir.
+```
+5- Boş id değeri ("") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidBlankTests.java --> blankGuidPatchUserActivity()
+```
+6- Boşluk id değeri (" ") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidSpaceTests.java --> spaceGuidPatchUserActivity()
+```
+7- Karakter guid değeri ("?!'^+%&/") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidCharacterTests.java --> characterGuidPatchUserActivity()
+```
+8- Doğru guid formatı fakat karakter ("!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidFormatButCharacterTests.java --> formatCharacterGuidPatchUserActivity()
+```
+9- Guid formatı sınır rakamlar ("99999999-9999-9999-9999-999999999999") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidNineTests.java --> nineGuidPatchUserActivity()
+- Burada sadece 2 kullanıcı olduğu bilindiğinden bu test senaryosu yazılmıştır.
+```
+10- Guid formatı sınır rakamlar ("00000000-0000-0000-0000-000000000000") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidZeroTests.java --> zeroGuidPatchUserActivity()
+- Buradaki test senaryosunun hatası ile daha önce karşılaşıldığı için yazılmıştır.
 
 ## Update User Info 
 ### |  PUT      | ....../users/[guid] 
@@ -139,8 +217,56 @@ Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test me
 | `firstName`    | `String` | *Adı*           |                                                            | `userId`         | `guid`          | *Kullanıcı Id*  | 
 | `lastName`     | `String` | *Soyadı*        |                                                            |                  |                 |                 |                      
 ```
-1-
+1- Örnek id ve bodyde gönderilen örnek parametreler ile kullanıcının güncellendiğinin doğrulanması
 ```
+- src/test/java/tests/happyPathCases/BaseTests.java --> putUpdateUserInfo()
+- getUserById ucundan firstName ve lastName değerleri ile doğrulama sağlanmıştır.
+```
+2- getUserList ucu ile alınan diğer id ve bodyde gönderilen örnek parametreler ile kullanıcının güncellendiğinin doğrulanması
+```
+- src/test/java/tests/happyPathCases/BaseId2Tests.java --> putUpdateUserInfo()
+```
+3- Örnek id ve bodyde gönderilen boş parametreler ile kullanıcının güncellenmediğinin doğrulanması
+```
+- src/test/java/tests/negativeCases/BlankBodyTests.java --> putUpdateUserInfo() 
+```
+4- getUserList ucu ile alınan diğer id ve bodyde gönderilen boş parametreler ile kullanıcının aktivitesinin değiştiğinin doğrulanması
+```
+- src/test/java/tests/happyPathCases/BaseId2Tests.java --> putUpdateUserInfo2().
+```
+5- Örnek id ve bodyde gönderilen karakter parametreleri ile kullanıcının güncellenmediğinin doğrulanması
+```
+- src/test/java/tests/negativeCases/CharacterBodyTests.java --> putUpdateUserInfo() 
+```
+6- getUserList ucu ile alınan diğer id ve bodyde gönderilen karakter parametreleri ile kullanıcının aktivitesinin değiştiğinin doğrulanması
+```
+- src/test/java/tests/negativeCases/CharacterBodyTests.java --> putUpdateUserInfo2().
+```
+7- Boş id değeri ("") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidBlankTests.java --> blankGuidPutUpdateUserInfo()
+```
+8- Boşluk id değeri (" ") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidSpaceTests.java --> spaceGuidPutUpdateUserInfo()
+```
+9- Karakter guid değeri ("?!'^+%&/") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidCharacterTests.java --> characterGuidPutUpdateUserInfo()
+```
+10- Doğru guid formatı fakat karakter ("!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidFormatButCharacterTests.java --> formatCharacterGuidPutUpdateUserInfo()
+```
+11- Guid formatı sınır rakamlar ("99999999-9999-9999-9999-999999999999") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidNineTests.java --> nineGuidPutUpdateUserInfo()
+- Burada sadece 2 kullanıcı olduğu bilindiğinden bu test senaryosu yazılmıştır.
+```
+12- Guid formatı sınır rakamlar ("00000000-0000-0000-0000-000000000000") ile status code 200 dönmemesi       
+```
+- src/test/java/tests/negativeCases/GuidZeroTests.java --> zeroGuidPutUpdateUserInfo()
+- Buradaki test senaryosunun hatası ile daha önce karşılaşıldığı için yazılmıştır.
 
 ## Projenin Kullanımı
 
