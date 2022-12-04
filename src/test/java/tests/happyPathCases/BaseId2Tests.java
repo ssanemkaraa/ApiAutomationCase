@@ -81,12 +81,12 @@ public class BaseId2Tests {
     @Test
     public void postCreateUserTest() {
 
-        if (endpointsVerifyMethods.verifyPostCreateUser()) {
+        String firstName = "jane";
+        String lastName = "doe";
+        String username = "doejj";
+        String password = "123456Aa*";
 
-            String firstName = "jane";
-            String lastName = "doe";
-            String username = "doejj";
-            String password = "123456Aa*";
+        if (endpointsVerifyMethods.verifyPostCreateUser(firstName,lastName,username,password)) {
 
             Response response = endpointsMethods.postCreateUser(firstName,lastName,username,password);
             PostCreateUserModel user = response.as(PostCreateUserModel.class);
@@ -111,9 +111,9 @@ public class BaseId2Tests {
     @Test
     public void patchUserActivityTrue() {
 
-        if (endpointsVerifyMethods.verifyPatchUserActivity(id_2)) {
+        if (endpointsVerifyMethods.verifyPatchUserActivity(id_2,true)) {
 
-            Response response = endpointsMethods.patchUserActivityTrue(id_2);
+            Response response = endpointsMethods.patchUserActivity(id_2,true);
             PatchSwitchUserActivityModel user = response.as(PatchSwitchUserActivityModel.class);
 
             // Verify response model is not null
@@ -139,9 +139,9 @@ public class BaseId2Tests {
     @Test
     public void patchUserActivityFalse() {
 
-        if (endpointsVerifyMethods.verifyPatchUserActivity(id_2)) {
+        if (endpointsVerifyMethods.verifyPatchUserActivity(id_2,false)) {
 
-            Response response = endpointsMethods.patchUserActivityFalse(id_2);
+            Response response = endpointsMethods.patchUserActivity(id_2,false);
             PatchSwitchUserActivityModel user = response.as(PatchSwitchUserActivityModel.class);
 
             // Verify response model is not null
@@ -167,10 +167,10 @@ public class BaseId2Tests {
     @Test
     public void putUpdateUserInfo() {
 
-        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_2)) {
+        String firstName = "jane";
+        String lastName = "doe";
 
-            String firstName = "jane";
-            String lastName = "doe";
+        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_2,firstName,lastName)) {
 
             Response response = endpointsMethods.putUpdateUserInfo(id_2, firstName, lastName);
             PutUpdateUserModel user = response.as(PutUpdateUserModel.class);
@@ -197,11 +197,10 @@ public class BaseId2Tests {
     @Severity(SeverityLevel.BLOCKER)
     @Test
     public void putUpdateUserInfo2() {
+        String firstName = "test";
+        String lastName = "test";
 
-        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_2)) {
-
-            String firstName = "test";
-            String lastName = "test";
+        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_2,firstName,lastName)) {
 
             Response response = endpointsMethods.putUpdateUserInfo(id_2, firstName, lastName);
             PutUpdateUserModel user = response.as(PutUpdateUserModel.class);

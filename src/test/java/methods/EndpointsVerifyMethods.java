@@ -33,10 +33,10 @@ public class EndpointsVerifyMethods {
         }
     }
 
-    public Boolean verifyPostCreateUser() {
+    public Boolean verifyPostCreateUser(String firstName, String lastName, String username, String password) {
         try {
             given()
-                    .body("")
+                    .body("{\r\n    \"firstName\": \""+firstName+"\",\r\n    \"lastName\": \""+lastName+"\",\r\n    \"username\": \""+username+"\",\r\n    \"password\" : \""+password+"\"\r\n}")
                     .when()
                     .post("/users")
                     .then()
@@ -82,11 +82,11 @@ public class EndpointsVerifyMethods {
         }
     }
 
-    public Boolean verifyPatchUserActivity(String userId) {
+    public Boolean verifyPatchUserActivity(String userId, Boolean userStatus) {
         try {
             given()
                     .contentType("application/json")
-                    .body("{\r\n    \"isActive\": true\r\n}")
+                    .body("{\r\n    \"isActive\": "+userStatus+"\r\n}")
                     .when()
                     .patch("/users/" + userId + "/activity")
                     .then()
@@ -99,11 +99,11 @@ public class EndpointsVerifyMethods {
         }
     }
 
-    public Boolean verifyPutUpdateUserInfo(String userId) {
+    public Boolean verifyPutUpdateUserInfo(String userId,String firstName, String lastName) {
         try {
             given()
                     .contentType("application/json")
-                    .body("{\r\n    \"firstName\" : \"jane\",\r\n    \"lastName\" : \"doe\"\r\n}")
+                    .body("{\r\n    \"firstName\" : \""+firstName+"\",\r\n    \"lastName\" : \""+lastName+"\"\r\n}")
                     .when()
                     .put("/users/" + userId)
                     .then()

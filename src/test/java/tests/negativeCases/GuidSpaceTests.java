@@ -37,7 +37,7 @@ public class GuidSpaceTests {
     public void spaceGuidPatchUserActivity() {
 
         // Verify response failed
-        assertFalse(endpointsVerifyMethods.verifyPatchUserActivity(id));
+        assertFalse(endpointsVerifyMethods.verifyPatchUserActivity(id,true));
 
     }
 
@@ -46,9 +46,11 @@ public class GuidSpaceTests {
     @Severity(SeverityLevel.NORMAL)
     @Test
     public void spaceGuidPutUpdateUserInfo() {
+        String firstName = "jane";
+        String lastName = "doe";
 
         // Verify response failed
-        assertFalse(endpointsVerifyMethods.verifyPutUpdateUserInfo(id));
+        assertFalse(endpointsVerifyMethods.verifyPutUpdateUserInfo(id,firstName,lastName));
 
     }
 

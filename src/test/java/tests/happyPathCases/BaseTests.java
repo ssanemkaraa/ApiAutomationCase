@@ -23,11 +23,6 @@ public class BaseTests {
 
     String id_1 = "c4f6c088-f91b-494e-b7f0-a08f48df3180";
 
-    //String id_2 = "c3e140a4-99db-44c2-a9ea-896904745993";
-
-    //String idUserModel = endpointsMethods.postCreateUser().as(UserActivityModel.class).getUserId();
-
-
     public BaseTests() throws IOException {
         endpointsMethods = new EndpointsMethods();
         endpointsVerifyMethods = new EndpointsVerifyMethods();
@@ -86,12 +81,12 @@ public class BaseTests {
     @Test
     public void postCreateUserTest() {
 
-        if (endpointsVerifyMethods.verifyPostCreateUser()) {
+        String firstName = "jane";
+        String lastName = "doe";
+        String username = "doejj";
+        String password = "123456Aa*";
 
-            String firstName = "jane";
-            String lastName = "doe";
-            String username = "doejj";
-            String password = "123456Aa*";
+        if (endpointsVerifyMethods.verifyPostCreateUser(firstName,lastName,username,password)) {
 
             Response response = endpointsMethods.postCreateUser(firstName,lastName,username,password);
             PostCreateUserModel user = response.as(PostCreateUserModel.class);
@@ -116,9 +111,9 @@ public class BaseTests {
     @Test
     public void patchUserActivityTrue() {
 
-        if (endpointsVerifyMethods.verifyPatchUserActivity(id_1)) {
+        if (endpointsVerifyMethods.verifyPatchUserActivity(id_1,true)) {
 
-            Response response = endpointsMethods.patchUserActivityTrue(id_1);
+            Response response = endpointsMethods.patchUserActivity(id_1,true);
             PatchSwitchUserActivityModel user = response.as(PatchSwitchUserActivityModel.class);
 
             // Verify response model is not null
@@ -144,9 +139,9 @@ public class BaseTests {
     @Test
     public void patchUserActivityFalse() {
 
-        if (endpointsVerifyMethods.verifyPatchUserActivity(id_1)) {
+        if (endpointsVerifyMethods.verifyPatchUserActivity(id_1,false)) {
 
-            Response response = endpointsMethods.patchUserActivityFalse(id_1);
+            Response response = endpointsMethods.patchUserActivityFalse(id_1,false);
             PatchSwitchUserActivityModel user = response.as(PatchSwitchUserActivityModel.class);
 
             // Verify response model is not null
@@ -172,10 +167,10 @@ public class BaseTests {
     @Test
     public void putUpdateUserInfo() {
 
-        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_1)) {
+        String firstName = "jane";
+        String lastName = "doe";
 
-            String firstName = "jane";
-            String lastName = "doe";
+        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_1,firstName,lastName)) {
 
             Response response = endpointsMethods.putUpdateUserInfo(id_1, firstName, lastName);
             PutUpdateUserModel user = response.as(PutUpdateUserModel.class);
@@ -203,10 +198,10 @@ public class BaseTests {
     @Test
     public void putUpdateUserInfo2() {
 
-        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_1)) {
+        String firstName = "test";
+        String lastName = "test";
 
-            String firstName = "test";
-            String lastName = "test";
+        if (endpointsVerifyMethods.verifyPutUpdateUserInfo(id_1,firstName,lastName)) {
 
             Response response = endpointsMethods.putUpdateUserInfo(id_1, firstName, lastName);
             PutUpdateUserModel user = response.as(PutUpdateUserModel.class);

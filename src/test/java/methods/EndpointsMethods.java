@@ -64,11 +64,11 @@ public class EndpointsMethods {
                         .extract().response();
     }
 
-    public Response patchUserActivityTrue(String userId) {
+    public Response patchUserActivity(String userId, Boolean userStatus) {
         return
                 given()
                         .contentType("application/json")
-                        .body("{\r\n    \"isActive\": true\r\n}")
+                        .body("{\r\n    \"isActive\": "+userStatus+"\r\n}")
                         .when()
                         .patch("/users/" + userId + "/activity")
                         .then()
@@ -77,11 +77,11 @@ public class EndpointsMethods {
                         .extract().response();
     }
 
-    public Response patchUserActivityFalse(String userId) {
+    public Response patchUserActivityFalse(String userId, Boolean userStatus) {
         return
                 given()
                         .contentType("application/json")
-                        .body("{\r\n    \"isActive\": false\r\n}")
+                        .body("{\r\n    \"isActive\": "+userStatus+"\r\n}")
                         .when()
                         .patch("/users/" + userId + "/activity")
                         .then()

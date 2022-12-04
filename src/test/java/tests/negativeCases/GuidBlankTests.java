@@ -23,7 +23,7 @@ public class GuidBlankTests {
     @Description("This response includes one user with id,username,firstName,lastName,isActive keys")
     @Severity(SeverityLevel.NORMAL)
     @Test
-    public void spaceGuidGetUserById() {
+    public void blankGuidGetUserById() {
 
         // Verify response failed
         assertFalse(endpointsVerifyMethods.verifyGetUserById(id));
@@ -34,10 +34,10 @@ public class GuidBlankTests {
     @Description("This response includes userId and isActive keys")
     @Severity(SeverityLevel.NORMAL)
     @Test
-    public void spaceGuidPatchUserActivity() {
+    public void blankGuidPatchUserActivity() {
 
         // Verify response failed
-        assertFalse(endpointsVerifyMethods.verifyPatchUserActivity(id));
+        assertFalse(endpointsVerifyMethods.verifyPatchUserActivity(id,true));
 
     }
 
@@ -45,10 +45,13 @@ public class GuidBlankTests {
     @Description("This response includes userId key")
     @Severity(SeverityLevel.NORMAL)
     @Test
-    public void spaceGuidPutUpdateUserInfo() {
+    public void blankGuidPutUpdateUserInfo() {
+
+        String firstName = "";
+        String lastName = "";
 
         // Verify response failed
-        assertFalse(endpointsVerifyMethods.verifyPutUpdateUserInfo(id));
+        assertFalse(endpointsVerifyMethods.verifyPutUpdateUserInfo(id,firstName,lastName));
 
     }
 
@@ -56,7 +59,7 @@ public class GuidBlankTests {
     @Description("This response just return status code")
     @Severity(SeverityLevel.NORMAL)
     @Test
-    public void spaceGuidDeleteUser() {
+    public void blankGuidDeleteUser() {
 
         // Verify response failed
         assertFalse(endpointsVerifyMethods.verifyDeleteUser(id));
