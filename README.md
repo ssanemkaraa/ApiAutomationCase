@@ -87,12 +87,12 @@ Java ile yapılan projenin test senaryolarında, test senaryosunun hangi test me
 3- Boş id değeri ("") ile status code 200 dönmemesi       
 ```
 - src/test/java/tests/negativeCases/GuidBlankTests.java --> spaceGuidGetUserById()
-- !!! Burada boş id ile kullanıcı listesini getiren methoda istek atılmaktadır.
+- !!! Burada boş id ile kullanıcı listesini getiren uca istek atılmaktadır.
 ```
 4- Boşluk id değeri (" ") ile status code 200 dönmemesi       
 ```
 - src/test/java/tests/negativeCases/GuidSpaceTests.java --> spaceGuidGetUserById()
-- !!! Burada boş id ile kullanıcı listesini getiren methoda istek atılmaktadır.
+- !!! Burada boş id ile kullanıcı listesini getiren uca istek atılmaktadır.
 ```
 5- Karakter guid değeri ("?!'^+%&/") ile status code 200 dönmemesi       
 ```
