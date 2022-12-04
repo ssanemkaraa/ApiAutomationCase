@@ -295,9 +295,9 @@ Bu package içerisinde test sınıfları bulunmaktadır. Testler HappyPath ve Ne
 
 ## Özet
 
-Java ile yapılan otomasyonda 46 test case içerisinde 31 test failed, 15 test passed durumundadır.
-
 Postman ile yapılan otomasyonda 168 test içerisinde 38 test failed, 130 test passed durumundadır.
+
+Java ile yapılan otomasyonda 46 test case içerisinde 31 test failed, 15 test passed durumundadır.
 
 <p float="left">
   <img src="Java_ApiBug.png" width="100" />
