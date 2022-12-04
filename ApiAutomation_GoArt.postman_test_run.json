@@ -1,0 +1,2176 @@
+{
+	"id": "763e1f75-99bf-4d99-b6ec-74eae60487b7",
+	"name": "ApiAutomation_GoArt",
+	"timestamp": "2022-12-04T18:05:18.815Z",
+	"collection_id": "20554647-956d9044-4941-4b6b-8048-38c029e5f5c2",
+	"folder_id": 0,
+	"environment_id": "20554647-ff9c218a-ae76-40f0-bbac-d7945c4fd13b",
+	"totalPass": 130,
+	"totalFail": 38,
+	"results": [
+		{
+			"id": "4a1aed3a-a6f9-4d5a-a22d-5494aa2e5711",
+			"name": "createUser",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users",
+			"time": 755,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": false,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Enviroment set userId value": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Enviroment set userId value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				755
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": false,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Enviroment set userId value": true
+				}
+			]
+		},
+		{
+			"id": "0ef12291-d204-4088-a8c4-d461ada256c4",
+			"name": "getUserList",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users",
+			"time": 272,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches userId value": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches userId value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				272
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches userId value": true
+				}
+			]
+		},
+		{
+			"id": "c561bc85-ae83-4ef9-84df-869de3d87ddf",
+			"name": "getUserById - 0",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180",
+			"time": 295,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches userId value": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches userId value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				295
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches userId value": true
+				}
+			]
+		},
+		{
+			"id": "d426910e-d571-4277-a972-01c8484025da",
+			"name": "getUserById - 1",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180",
+			"time": 424,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": false,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches userId value": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches userId value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				424
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": false,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches userId value": false
+				}
+			]
+		},
+		{
+			"id": "75457025-44fd-478a-88c8-495cd162da78",
+			"name": "switchUserActivity - 0 - True",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180/activity",
+			"time": 284,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches value": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				284
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches value": true
+				}
+			]
+		},
+		{
+			"id": "06f2104f-7519-4221-834d-cac4ca5eaecd",
+			"name": "getUserById Verify Activity True User 0",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180",
+			"time": 310,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"isActive is equal true": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"isActive is equal true": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				310
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"isActive is equal true": true
+				}
+			]
+		},
+		{
+			"id": "7062f2cb-270a-4574-bc55-6a63d414b47e",
+			"name": "switchUserActivity - 1 - True",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c3e140a4-99db-44c2-a9ea-896904745993/activity",
+			"time": 456,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches value": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				456
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches value": false
+				}
+			]
+		},
+		{
+			"id": "aa89333e-cb0f-4407-ae42-7daf1b3ee29b",
+			"name": "getUserById Verify Activity True User 1",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c3e140a4-99db-44c2-a9ea-896904745993",
+			"time": 544,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": false,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": false,
+				"isActive is equal true": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 0,
+					"fail": 1
+				},
+				"isActive is equal true": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				544
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": false,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": false,
+					"isActive is equal true": false
+				}
+			]
+		},
+		{
+			"id": "d2438065-b6e0-4515-88ca-780579419f2d",
+			"name": "switchUserActivity - 0 - False",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180/activity",
+			"time": 299,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches value": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				299
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches value": true
+				}
+			]
+		},
+		{
+			"id": "d4299eb6-6098-4ce5-a366-33e852f8c501",
+			"name": "getUserById Verify Activity False User 0",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180",
+			"time": 367,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": false,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"isActive is equal true": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"isActive is equal true": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				367
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": false,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"isActive is equal true": false
+				}
+			]
+		},
+		{
+			"id": "12995f53-3228-4026-a9ce-f7775076ab60",
+			"name": "switchUserActivity - 1 - False",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c3e140a4-99db-44c2-a9ea-896904745993/activity",
+			"time": 865,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": false,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches value": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				865
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": false,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches value": false
+				}
+			]
+		},
+		{
+			"id": "ffcaffa3-87a6-4bbd-9d73-4f4a27047b87",
+			"name": "getUserById Verify Activity False User 1",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c3e140a4-99db-44c2-a9ea-896904745993",
+			"time": 377,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": false,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": false,
+				"isActive is equal true": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 0,
+					"fail": 1
+				},
+				"isActive is equal true": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				377
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": false,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": false,
+					"isActive is equal true": false
+				}
+			]
+		},
+		{
+			"id": "c2fc606c-fdbe-4a35-bc11-611110e40d16",
+			"name": "updateUserInfo - 0",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180",
+			"time": 294,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches userId value": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches userId value": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				294
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches userId value": true
+				}
+			]
+		},
+		{
+			"id": "4eb45957-90a7-4e5e-8af9-baea356d47cc",
+			"name": "getUserById Verify Update User 0 Info",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180",
+			"time": 308,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"isActive is equal true": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"isActive is equal true": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				308
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"isActive is equal true": false
+				}
+			]
+		},
+		{
+			"id": "b5066bde-8604-4262-92fb-22c4355337a1",
+			"name": "updateUserInfo - 1",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c3e140a4-99db-44c2-a9ea-896904745993",
+			"time": 285,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body matches userId value": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches userId value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				285
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body matches userId value": false
+				}
+			]
+		},
+		{
+			"id": "10c391dc-5482-47fc-843c-c723fb9a73c3",
+			"name": "getUserById Verify Update User 1 Info",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c3e140a4-99db-44c2-a9ea-896904745993",
+			"time": 305,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": false,
+				"isActive is equal true": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 0,
+					"fail": 1
+				},
+				"isActive is equal true": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				305
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": false,
+					"isActive is equal true": false
+				}
+			]
+		},
+		{
+			"id": "5abdea7b-bd98-4c9f-bc05-12c2d1fc9036",
+			"name": "removeUser - 0",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c4f6c088-f91b-494e-b7f0-a08f48df3180",
+			"time": 292,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				292
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "3ea20fc9-e0af-40ee-9261-0d518c4715fa",
+			"name": "getUserList Verify Remove User 0",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users",
+			"time": 294,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body has not include deleted userId value": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has not include deleted userId value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				294
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body has not include deleted userId value": false
+				}
+			]
+		},
+		{
+			"id": "f6f0a7b1-0b99-4987-92a9-f1d87efb7ddb",
+			"name": "removeUser - 1",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/c3e140a4-99db-44c2-a9ea-896904745993",
+			"time": 286,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 350ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				286
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 350ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "e75e0334-abb3-4197-9a4a-a753c13b1c13",
+			"name": "getUserList Verify Remove User 1",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users",
+			"time": 289,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true,
+				"Content-Type header is present": true,
+				"Content-Type header is application/json": true,
+				"Test data type of the key": true,
+				"Body has not include deleted userId value": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Test data type of the key": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body has not include deleted userId value": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				289
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true,
+					"Content-Type header is present": true,
+					"Content-Type header is application/json": true,
+					"Test data type of the key": true,
+					"Body has not include deleted userId value": false
+				}
+			]
+		},
+		{
+			"id": "93a4ae86-ced4-45d6-8256-97e635314b5a",
+			"name": "getUserById",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/00000000-0000-0000-0000-000000000000",
+			"time": 413,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				413
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "728a1d5f-bec2-4295-a023-23174d14ee60",
+			"name": "removeUser",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/00000000-0000-0000-0000-000000000000",
+			"time": 351,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 350ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 350ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				351
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 350ms": false
+				}
+			]
+		},
+		{
+			"id": "2ab88aa0-9903-4f1e-be64-de5b28f3c7e7",
+			"name": "switchUserActivity - True",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/00000000-0000-0000-0000-000000000000/activity",
+			"time": 277,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				277
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "264458e3-910d-450e-8660-cca2acecc1e4",
+			"name": "switchUserActivity - False",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/00000000-0000-0000-0000-000000000000/activity",
+			"time": 276,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				276
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "99e36266-3b98-4d58-b04f-23eebcb917f7",
+			"name": "updateUserInfo",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/00000000-0000-0000-0000-000000000000",
+			"time": 301,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				301
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "6ff7ea16-85d2-491c-9c48-eead7ce63a50",
+			"name": "getUserById",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/99999999-9999-9999-9999-999999999999",
+			"time": 257,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				257
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "cba8b256-c834-4fa6-81a1-568c8acb1570",
+			"name": "removeUser",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/99999999-9999-9999-9999-999999999999",
+			"time": 283,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 350ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				283
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 350ms": true
+				}
+			]
+		},
+		{
+			"id": "e8422682-bccd-4df3-bc29-9c267a3023a7",
+			"name": "switchUserActivity - True",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/99999999-9999-9999-9999-999999999999/activity",
+			"time": 285,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				285
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "02ad1698-bce8-4574-80ce-2d71c3f0f1bf",
+			"name": "switchUserActivity - False",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/99999999-9999-9999-9999-999999999999/activity",
+			"time": 261,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				261
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "6dd348a8-2599-4702-8c81-526b37b3bc84",
+			"name": "updateUserInfo",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/99999999-9999-9999-9999-999999999999",
+			"time": 296,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "61ba9dbd-c1dd-4906-a49b-f6edf5395ef0",
+			"name": "getUserById",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!'^+%&/(",
+			"time": 142,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				142
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "47c490da-e608-49fb-90cf-77dcda4ff448",
+			"name": "removeUser",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!'^+%&/(",
+			"time": 576,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 350ms": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				576
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 350ms": false
+				}
+			]
+		},
+		{
+			"id": "8246bf31-91b4-4832-bef1-9185695a71a3",
+			"name": "switchUserActivity - True",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!'^+%&/(/activity",
+			"time": 429,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				429
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "b0cc6161-b4b3-48bc-8679-d2e76fa95848",
+			"name": "switchUserActivity - False",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!'^+%&/(/activity",
+			"time": 414,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				414
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "6d33b778-b836-41ea-98c5-08aaa1daa63a",
+			"name": "updateUserInfo",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!'^+%&/(",
+			"time": 429,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				429
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "b34cfadf-07c7-4253-b2e9-0efb51e1ebfc",
+			"name": "getUserById",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!",
+			"time": 611,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				611
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "b60a72ef-81b7-42d4-a4a2-c02b7adcd365",
+			"name": "removeUser",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!",
+			"time": 285,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 350ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				285
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 350ms": true
+				}
+			]
+		},
+		{
+			"id": "c8a3f837-e226-49b7-819e-295b1e3fa584",
+			"name": "switchUserActivity - True",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!/activity",
+			"time": 324,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				324
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "77dbf724-0c55-4c44-9f4b-e307e2880852",
+			"name": "switchUserActivity - False",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!/activity",
+			"time": 282,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				282
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "960fc61f-0ed8-4f8f-ac42-9a596c388149",
+			"name": "updateUserInfo",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/!!!!!!!!-!!!!-!!!!-!!!!-!!!!!!!!!!!!",
+			"time": 294,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				294
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "c8721217-f0cf-4fbf-beaf-832e86b4cf78",
+			"name": "getUserById",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/%20",
+			"time": 283,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				283
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "3afced36-8e04-4750-a7dd-90c9dd375a2a",
+			"name": "removeUser",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/%20",
+			"time": 300,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 350ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				300
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 350ms": true
+				}
+			]
+		},
+		{
+			"id": "6c29682a-4759-4c06-a7c0-19bf4606cf84",
+			"name": "switchUserActivity - True",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/%20/activity",
+			"time": 296,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				296
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "d4a802dd-11f9-404b-86c8-ddfb9ca5c1e0",
+			"name": "switchUserActivity - False",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/%20/activity",
+			"time": 275,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				275
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "f8af0a90-780a-4ad9-8067-925bfe7f399d",
+			"name": "updateUserInfo",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users/%20",
+			"time": 281,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				281
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "fa552894-96f7-427e-9d45-6cbdb8d626a0",
+			"name": "createUser BlankBody",
+			"url": "https://3e3d2990-3fca-4144-8b26-1538cf135a09.mock.pstmn.io/users",
+			"time": 297,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 400": false,
+				"Response time is less than 350ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 350ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				297
+			],
+			"allTests": [
+				{
+					"Status code is 400": false,
+					"Response time is less than 350ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 16119,
+	"collection": {
+		"requests": [
+			{
+				"id": "4a1aed3a-a6f9-4d5a-a22d-5494aa2e5711",
+				"method": "POST"
+			},
+			{
+				"id": "0ef12291-d204-4088-a8c4-d461ada256c4",
+				"method": "GET"
+			},
+			{
+				"id": "c561bc85-ae83-4ef9-84df-869de3d87ddf",
+				"method": "GET"
+			},
+			{
+				"id": "d426910e-d571-4277-a972-01c8484025da",
+				"method": "GET"
+			},
+			{
+				"id": "75457025-44fd-478a-88c8-495cd162da78",
+				"method": "PATCH"
+			},
+			{
+				"id": "06f2104f-7519-4221-834d-cac4ca5eaecd",
+				"method": "GET"
+			},
+			{
+				"id": "7062f2cb-270a-4574-bc55-6a63d414b47e",
+				"method": "PATCH"
+			},
+			{
+				"id": "aa89333e-cb0f-4407-ae42-7daf1b3ee29b",
+				"method": "GET"
+			},
+			{
+				"id": "d2438065-b6e0-4515-88ca-780579419f2d",
+				"method": "PATCH"
+			},
+			{
+				"id": "d4299eb6-6098-4ce5-a366-33e852f8c501",
+				"method": "GET"
+			},
+			{
+				"id": "12995f53-3228-4026-a9ce-f7775076ab60",
+				"method": "PATCH"
+			},
+			{
+				"id": "ffcaffa3-87a6-4bbd-9d73-4f4a27047b87",
+				"method": "GET"
+			},
+			{
+				"id": "c2fc606c-fdbe-4a35-bc11-611110e40d16",
+				"method": "PUT"
+			},
+			{
+				"id": "4eb45957-90a7-4e5e-8af9-baea356d47cc",
+				"method": "GET"
+			},
+			{
+				"id": "b5066bde-8604-4262-92fb-22c4355337a1",
+				"method": "PUT"
+			},
+			{
+				"id": "10c391dc-5482-47fc-843c-c723fb9a73c3",
+				"method": "GET"
+			},
+			{
+				"id": "5abdea7b-bd98-4c9f-bc05-12c2d1fc9036",
+				"method": "DELETE"
+			},
+			{
+				"id": "3ea20fc9-e0af-40ee-9261-0d518c4715fa",
+				"method": "GET"
+			},
+			{
+				"id": "f6f0a7b1-0b99-4987-92a9-f1d87efb7ddb",
+				"method": "DELETE"
+			},
+			{
+				"id": "e75e0334-abb3-4197-9a4a-a753c13b1c13",
+				"method": "GET"
+			},
+			{
+				"id": "93a4ae86-ced4-45d6-8256-97e635314b5a",
+				"method": "GET"
+			},
+			{
+				"id": "728a1d5f-bec2-4295-a023-23174d14ee60",
+				"method": "DELETE"
+			},
+			{
+				"id": "2ab88aa0-9903-4f1e-be64-de5b28f3c7e7",
+				"method": "PATCH"
+			},
+			{
+				"id": "264458e3-910d-450e-8660-cca2acecc1e4",
+				"method": "PATCH"
+			},
+			{
+				"id": "99e36266-3b98-4d58-b04f-23eebcb917f7",
+				"method": "PUT"
+			},
+			{
+				"id": "6ff7ea16-85d2-491c-9c48-eead7ce63a50",
+				"method": "GET"
+			},
+			{
+				"id": "cba8b256-c834-4fa6-81a1-568c8acb1570",
+				"method": "DELETE"
+			},
+			{
+				"id": "e8422682-bccd-4df3-bc29-9c267a3023a7",
+				"method": "PATCH"
+			},
+			{
+				"id": "02ad1698-bce8-4574-80ce-2d71c3f0f1bf",
+				"method": "PATCH"
+			},
+			{
+				"id": "6dd348a8-2599-4702-8c81-526b37b3bc84",
+				"method": "PUT"
+			},
+			{
+				"id": "61ba9dbd-c1dd-4906-a49b-f6edf5395ef0",
+				"method": "GET"
+			},
+			{
+				"id": "47c490da-e608-49fb-90cf-77dcda4ff448",
+				"method": "DELETE"
+			},
+			{
+				"id": "8246bf31-91b4-4832-bef1-9185695a71a3",
+				"method": "PATCH"
+			},
+			{
+				"id": "b0cc6161-b4b3-48bc-8679-d2e76fa95848",
+				"method": "PATCH"
+			},
+			{
+				"id": "6d33b778-b836-41ea-98c5-08aaa1daa63a",
+				"method": "PUT"
+			},
+			{
+				"id": "b34cfadf-07c7-4253-b2e9-0efb51e1ebfc",
+				"method": "GET"
+			},
+			{
+				"id": "b60a72ef-81b7-42d4-a4a2-c02b7adcd365",
+				"method": "DELETE"
+			},
+			{
+				"id": "c8a3f837-e226-49b7-819e-295b1e3fa584",
+				"method": "PATCH"
+			},
+			{
+				"id": "77dbf724-0c55-4c44-9f4b-e307e2880852",
+				"method": "PATCH"
+			},
+			{
+				"id": "960fc61f-0ed8-4f8f-ac42-9a596c388149",
+				"method": "PUT"
+			},
+			{
+				"id": "c8721217-f0cf-4fbf-beaf-832e86b4cf78",
+				"method": "GET"
+			},
+			{
+				"id": "3afced36-8e04-4750-a7dd-90c9dd375a2a",
+				"method": "DELETE"
+			},
+			{
+				"id": "6c29682a-4759-4c06-a7c0-19bf4606cf84",
+				"method": "PATCH"
+			},
+			{
+				"id": "d4a802dd-11f9-404b-86c8-ddfb9ca5c1e0",
+				"method": "PATCH"
+			},
+			{
+				"id": "f8af0a90-780a-4ad9-8067-925bfe7f399d",
+				"method": "PUT"
+			},
+			{
+				"id": "fa552894-96f7-427e-9d45-6cbdb8d626a0",
+				"method": "POST"
+			}
+		]
+	}
+}
