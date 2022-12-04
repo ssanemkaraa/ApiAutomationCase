@@ -300,5 +300,5 @@ Postman ile yapılan otomasyonda 168 test içerisinde 38 test failed, 130 test p
 Java ile yapılan otomasyonda 46 test case içerisinde 31 test failed, 15 test passed durumundadır.
 
 <p float="left">
-  <img src="Java_ApiBug.png" width="100" />
+  <img src="../Results/Java_ApiBug.png" width="100" />
 </p>
